@@ -8,7 +8,7 @@ class QuotesSpider(scrapy.Spider):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.scripts = pd.read_csv("../data/scripts.csv")
+        self.scripts = pd.read_csv("../../data/scripts.csv")
         self.start_urls = self.scripts.script_link.tolist()
         self.labels = [
             "ross",
@@ -20,21 +20,23 @@ class QuotesSpider(scrapy.Spider):
         ]
 
     def parse(self, response):
-        pars = response.css("p *::text").getall()
-        for index, par in enumerate(pars):
-
+        pars = response.css("p")
+        for index, parEl in enumerate(pars):
+            par = parEl.css("*::text").getall()
+            par = "".join(par)
+            print(par)
             try:
                 p = par.split(':', 1)
                 person = re.sub('\s+', ' ', p[0]).strip().lower()
                 if person not in self.labels:
                     continue
                 dialogue = re.sub('\s+', ' ', p[1]).strip()
-                print(dialogue, p[1])
 
             except:
                 continue
 
             yield {
+                "script_url": response.request.url,
                 "person": person,
                 "dialogue": dialogue,
             }
