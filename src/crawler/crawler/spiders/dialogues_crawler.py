@@ -8,7 +8,7 @@ class QuotesSpider(scrapy.Spider):
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.scripts = pd.read_csv("../../data/scripts.csv")
+        self.scripts = pd.read_csv("../../data/raw/scripts.csv")
         self.start_urls = self.scripts.script_link.tolist()
         self.labels = [
             "ross",
@@ -24,7 +24,6 @@ class QuotesSpider(scrapy.Spider):
         for index, parEl in enumerate(pars):
             par = parEl.css("*::text").getall()
             par = "".join(par)
-            print(par)
             try:
                 p = par.split(':', 1)
                 person = re.sub('\s+', ' ', p[0]).strip().lower()
@@ -36,7 +35,6 @@ class QuotesSpider(scrapy.Spider):
                 continue
 
             yield {
-                "script_url": response.request.url,
                 "person": person,
                 "dialogue": dialogue,
             }
