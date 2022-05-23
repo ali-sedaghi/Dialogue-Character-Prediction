@@ -4,13 +4,15 @@
 - [Phase 1 report file](P1_Report.pdf)
 - [Scripts data file](data/raw/scripts.csv)
 - [Raw dialogues data file](data/raw/dialogues.csv)
-- [Preprocessed file step by step](data/preprocessed)
+- [Preprocessed files step by step](data/preprocessed)
 - [Cleaned dataset](data/dialogues_cleaned.csv)
+- [Statistics before preprocessing](statistics/before_preprocessing)
+- [Statistics after preprocessing](statistics/after_preprocessing)
 
 ## Dataset
 [Friends](https://en.wikipedia.org/wiki/Friends) tv series scripts used as dataset. Friends is an American television sitcom which aired on NBC from September 22, 1994, to May 6, 2004.
 
-There are 7 main characters (classes) in this show:
+There are 6 main characters (classes) in this show:
 - Ross
 - Rachel
 - Joey
@@ -44,4 +46,16 @@ scrapy crawl dialogues -t csv -o ../../data/raw/dialogues.csv
 ```bash
 cd src/preprocessing
 python preprocessor.py
+```
+
+### Statistics
+- Each person words count
+- Each person types count
+- Each person wordcloud
+- Each person histogram
+
+Above metrics are extracted for entire scripts before and after preprocessing.
+```bash
+cd src/statistics
+python main.py
 ```
