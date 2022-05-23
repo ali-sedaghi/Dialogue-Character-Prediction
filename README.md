@@ -1,6 +1,5 @@
 # Dialogue Prediction
 
----
 ## File directories
 - [Phase 1 report file](P1_Report.pdf)
 - [Scripts data file](data/raw/scripts.csv)
@@ -8,7 +7,6 @@
 - [Preprocessed file step by step](data/preprocessed)
 - [Cleaned dataset](data/dialogues_cleaned.csv)
 
----
 ## Dataset
 [Friends](https://en.wikipedia.org/wiki/Friends) tv series scripts used as dataset. Friends is an American television sitcom which aired on NBC from September 22, 1994, to May 6, 2004.
 
@@ -22,9 +20,7 @@ There are 7 main characters (classes) in this show:
 
 The scripts are gathered from [Here](https://www.oocities.org/friends_greatestsitcom).
 
----
 ## How to run
-
 ### Requirements
 Python packages must be installed:
 ```bash
@@ -49,5 +45,3 @@ scrapy crawl dialogues -t csv -o ../../data/raw/dialogues.csv
 cd src/preprocessing
 python preprocessor.py
 ```
-
----
