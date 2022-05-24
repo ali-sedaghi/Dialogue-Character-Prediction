@@ -1,5 +1,5 @@
 # Dialogue Prediction
-
+In the dialogue prediction task, a model is trained to perdict a character's name based on the given dialogue.
 ## File directories
 - [Phase 1 report file](P1_Report.pdf)
 - [Scripts data file](data/raw/scripts.csv)
