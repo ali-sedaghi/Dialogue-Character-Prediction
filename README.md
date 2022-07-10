@@ -1,7 +1,7 @@
 # Dialogue Prediction
 
 ## File directories
-- [Phase 1 report file](P1_Report.pdf)
+- [Phase 1 report file](reports/P1_Report.pdf)
 - [Scripts data file](data/raw/scripts.csv)
 - [Raw dialogues data file](data/raw/dialogues.csv)
 - [Preprocessed files step by step](data/preprocessed)
