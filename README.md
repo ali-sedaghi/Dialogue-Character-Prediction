@@ -59,3 +59,7 @@ Above metrics are extracted for entire scripts before and after preprocessing.
 cd src/statistics
 python main.py
 ```
+
+### Out of repo resources
+- [Word clouds](https://drive.google.com/drive/folders/1oEoJabB_qBpmrj-7fJ8PJb7f15PbEM1s?usp=sharing)
+- [Model checkpoints](https://drive.google.com/drive/folders/1ns28107R3oX9ywDaTBJpCvSALwxCOQK4?usp=sharing)
