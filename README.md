@@ -2,12 +2,15 @@
 In the dialogue prediction task, a model is trained to perdict a character's name based on the given dialogue.
 ## File directories
 - [Phase 1 report file](reports/P1_Report.pdf)
+- [Phase 2 report file](reports/P2_Report.pdf)
 - [Scripts data file](data/raw/scripts.csv)
 - [Raw dialogues data file](data/raw/dialogues.csv)
 - [Preprocessed files step by step](data/preprocessed)
 - [Cleaned dataset](data/dialogues_cleaned.csv)
 - [Statistics before preprocessing](statistics/before_preprocessing)
 - [Statistics after preprocessing](statistics/after_preprocessing)
+- [Notebooks](notebooks)
+- [Model checkpoints](models)
 
 ## Dataset
 [Friends](https://en.wikipedia.org/wiki/Friends) tv series scripts used as dataset. Friends is an American television sitcom which aired on NBC from September 22, 1994, to May 6, 2004.
